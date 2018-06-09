@@ -12,3 +12,4 @@ Unsplash photo – [link](https://unsplash.com/photos/pvHma684eEI)
 <br><br>
 ## Issues
 * main-nav-content for "for elever" and "om oss" does not display properly
+* footer afk-logo needs black text
