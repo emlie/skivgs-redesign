@@ -82,4 +82,97 @@ body {
   width: 100vw;
   height: 100vh;
   background: var(--gray-lighter);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+header {
+  width: 100vw;
+  padding: 1.5rem 0 1.5rem 0;
+  position: relative;
+  top: 0;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: yellow;
+}
+
+main {
+  width: 100vw;
+  height: 5rem;
+  background: lightblue;
+}
+
+footer {
+  width: 100vw;
+  height: 5rem;
+  position: absolute;
+  bottom: 0;
+  background: orange;
+}
+
+
+
+
+
+
+
+
+
+
+/*------------------------ CLASSES ------------------------*/
+.wrapper {
+  width: 90%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+  border: 1px solid transparent;
+}
+
+.header-logo {
+  width: auto;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.header-nav {
+  height: 3rem;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  align-content: center;
+  justify-content: flex-start;
+  border: 1px solid transparent;
+  font-family: var(--main-ff-ss-1);
+  font-size: 2vw;
+  font-weight: var(--regular);
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+}
+
+.header-nav ul {
+  list-style-type: none;
+}
+
+.header-nav ul li {
+  display: inline;
+  padding: var(--space);
+}
+
+.header-nav ul li:last-child {
+  padding-right: calc(var(--space)*4)
+}
+
+.header-nav img {
+  height: 1.5rem;
 }
