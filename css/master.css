@@ -143,10 +143,22 @@ main {
 
 footer {
   width: 100vw;
-  height: 5rem;
   position: absolute;
   bottom: 0;
-  background: orange;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: var(--gray-lighter);
+  font-family: var(--main-ff-ss-1);
+  font-size: 4vw;
+  font-weight: var(--regular);
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
 }
 
 
@@ -252,23 +264,27 @@ ul,
 }
 */
 
-.main-nav ul li {
+.main-nav ul li,
+.footer-nav ul li {
   border-bottom: 0.1rem solid var(--almost-black);
   cursor: pointer;
   font-weight: normal;
 }
 
-.main-nav ul li a:hover {
+.main-nav ul li a:hover,
+.footer-nav ul li a:hover {
   color: inherit;
 }
 
-.main-nav-content {
+.main-nav-content,
+.footer-nav-content {
   margin: 0 calc(var(--space)*4) 0 0;
   border: 1px solid transparent;
   transition: var(--smooth);
 }
 
-.main-nav-content ul {
+.main-nav-content ul,
+.footer-nav-content ul {
   font-size: inherit;
 }
 
@@ -293,6 +309,61 @@ ul,
 
 
 
+/*
+.footer-contact {
+  padding: var(--space);
+  border: 1px solid blue;
+  font-family: var(--main-ff-ss-1);
+  font-size: 2vw;
+  font-weight: var(--regular);
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+}
+*/
+
+.footer-nav {
+  width: 90%;
+  padding: calc(var(--space)*2) 0 calc(var(--space)*2) 0;
+  background: transparent;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: space-between;
+  font-size: 2.2vw;
+  transition: var(--smooth);
+}
+
+.footer-nav-content ul li {
+  font-size: 1vw;
+}
+
+.footer-nav-content ul li a {
+  color: inherit;
+}
+
+.footer-nav-content ol {
+  list-style-type: none;
+  margin: var(--space) 0 0 0;
+  font-size: 1.3vw;
+}
+
+.footer-nav-content ol li a {
+  font-size: inherit;
+  font-style: italic;
+}
+
+.footer-nav-content ol li span {
+  color: transparent;
+}
+
+
+
+
+
 
 
 
@@ -304,34 +375,4 @@ ul,
 #forElever,
 #omOss {
   display: none;
-}
-
-
-
-
-
-
-
-
-
-
-/*------------------------ ANIMATIONS/TRANSITIONS ------------------------*/
-.bounce-enter-active {
-  animation: bounce-in .5s;
-}
-
-.bounce-leave-active {
-  animation: bounce-in .5s reverse;
-}
-
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
