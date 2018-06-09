@@ -6,6 +6,15 @@
     <title>Ski Vgs</title>
     <link rel="stylesheet" href="css/master.css">
 
+    <!--
+    vue.js (must be linked in head)
+    development version, includes helpful console warnings
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <!-- animation library animate.css-->
+    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
+
   </head>
   <body>
 
@@ -16,22 +25,347 @@
     <header>
 
       <div class="wrapper">
+
         <div class="header-logo">
           <img src="images/153612-dc9d01fba155f0e05deee7a189f6e319.png" alt="logo">
-        </div>
+        </div>  <!-- header-logo -->
+
         <div class="header-nav">
           <ul>
             <li>kontakt</li>
             <li>velg språk</li>
           </ul>
           <form>
-            <input type="text" name="seacrh" placeholder="Søk">
+            <input type="text" name="seacrh" placeholder="søk">
             <button type="submit"><img src="icons/search.svg" alt="search"></button>
           </form>
-        </div>
-      </div>
+        </div> <!-- header-nav -->
+
+      </div> <!-- wrapper -->
 
     </header>
+
+
+
+
+
+    <nav>
+
+      <div class="wrapper">
+        <ul>
+          <li>
+            <a onclick="showUprogram()" id="aUprogram">utdanningsprogram</a>
+          </li>
+          <li>
+            <a onclick="showAktuelt()" id="aAktuelt">aktuelt</a>
+          </li>
+          <li>
+            <a onclick="showForElever()" id="aForElever">for elever</a>
+          </li>
+          <li>
+            <a onclick="showOmOss()" id="aOmOss">om oss</a>
+          </li>
+        </ul>
+      </div> <!-- wrapper -->
+
+      <div class="main-nav" id="uprogram">
+        <ul v-if="show">
+          <li>
+            <a href="#">idrettsfag</a>
+          </li>
+          <li>
+            <a href="#">musikk, dans og drama</a>
+          </li>
+          <li>
+            <a href="#">studiespesialisering</a>
+          </li>
+          <li>
+            <a href="#">minoritetsspråklige</a>
+          </li>
+          <li>
+            <a href="#">voksenopplæring</a>
+          </li>
+        </ul>
+      </div> <!-- uprogram -->
+
+      <div class="main-nav" id="aktuelt">
+        <ul>
+          <li>
+            <a href="#">kalender</a>
+          </li>
+          <li>
+            <a href="#">nyhetsarkiv</a>
+          </li>
+          <li>
+            <a href="#">elevenes aktiviteter</a>
+          </li>
+        </ul>
+      </div> <!-- aktuelt -->
+
+      <div class="main-nav" id="forElever">
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">elevtjenester</a>
+            </li>
+          </ul>
+
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">rådgivertjenesten</a>
+            </li>
+            <li>
+              <a href="#">bibliotek</a>
+            </li>
+            <li>
+              <a href="#">helsetjenester</a>
+            </li>
+            <li>
+              <a href="#">kantina</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">elevinvolvering</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">elevråd</a>
+            </li>
+            <li>
+              <a href="#">fylkesråd</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">ressurser</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">IKT</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">eksamen</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">eksamensplan</a>
+            </li>
+            <li>
+              <a href="#">retningslinjer</a>
+            </li>
+            <li>
+              <a href="#">tilrettelegging</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">praktisk informasjon</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">lån og stipend</a>
+            </li>
+            <li>
+              <a href="#">skoelskyss</a>
+            </li>
+            <li>
+              <a href="#">elevforsikring</a>
+            </li>
+            <li>
+              <a href="#">spørreundersøkelse om ungdoms livsstil og levekår</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">regler og rutiner</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">reglementer</a>
+            </li>
+            <li>
+              <a href="#">klage på karakter</a>
+            </li>
+            <li>
+              <a href="#">klage på opplæring</a>
+            </li>
+            <li>
+              <a href="#">fratrekk av fravær</a>
+            </li>
+            <li>
+              <a href="#">informajson om forebyggende samarbeid med politiet</a>
+            </li>
+            <li>
+              <a href="#">personopplysninger</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">skolemiljø</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">elev-, lærling- og mobbeombud</a>
+            </li>
+            <li>
+              <a href="#">rett til trygt skolemiljø</a>
+            </li>
+          </ol>
+        </div>
+
+      </div> <!-- forElever -->
+
+      <div class="main-nav" id="omOss">
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">om skolen</a>
+            </li>
+          </ul>
+
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">lokaler og beliggenhet</a>
+            </li>
+            <li>
+              <a href="#">historie</a>
+            </li>
+            <li>
+              <a href="#">utlån av lokaler</a>
+            </li>
+            <li>
+              <a href="#">bibliotek</a>
+            </li>
+            <li>
+              <a href="#">kantina</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">organisasjon</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">alle ansatte</a>
+            </li>
+            <li>
+              <a href="#">organisasjonskart</a>
+            </li>
+            <li>
+              <a href="#">ledige stillinger</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">slik jobber vi</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">visjon og verdier</a>
+            </li>
+            <li>
+              <a href="#">pedagogisk profil</a>
+            </li>
+            <li>
+              <a href="#">involvering av foresatte</a>
+            </li>
+            <li>
+              <a href="#">informasjon om forebyggende samarbeid med politiet</a>
+            </li>
+            <li>
+              <a href="#">regler og rutiner</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">prosjekter og satsinger</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">den gode akershusskolen</a>
+            </li>
+            <li>
+              <a href="#">den kulturelle skolesekken</a>
+            </li>
+            <li>
+              <a href="#">elos</a>
+            </li>
+            <li>
+              <a href="#">mobbing og trakassering</a>
+            </li>
+            <li>
+              <a href="#">nafo fokusskole</a>
+            </li>
+            <li>
+              <a href="#">vurdering for læring</a>
+            </li>
+          </ol>
+        </div>
+
+        <div class="main-nav-content">
+          <ul>
+            <li>
+              <a href="#">kontakt oss</a>
+            </li>
+          </ul>
+          <ol class="secondary-ul">
+            <li>
+              <a href="#">kontakt</a>
+            </li>
+            <li>
+              <a href="#">alle ansatte</a>
+            </li>
+            <li>
+              <a href="#">finn fram</a>
+            </li>
+            <li>
+              <a href="#">liste over kontaktlærere, rådgivere og trinnledere 2017–2018</a>
+            </li>
+          </ol>
+        </div>
+
+      </div> <!-- forElever -->
+
+    </nav>
 
 
 
@@ -49,12 +383,17 @@
 
       <!--
       <div>Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+
+      <div>Icons made by <a href="https://www.flaticon.com/authors/iconnice" title="Iconnice">Iconnice</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
       -->
 
     </footer>
 
 
 
+
+
+<script src="scripts/scripts.js"></script>
 
 
   </body>

@@ -9,3 +9,6 @@ Color information – light blue – [link](https://www.colorhexa.com/64c3d8)
 Vestre-prosjekt – [link](https://vestre.com/no/project/ski-videregaaende-skole-ski/)
 <br>
 Unsplash photo – [link](https://unsplash.com/photos/pvHma684eEI)
+<br><br>
+## Issues
+* main-nav-content for "for elever" and "om oss" does not display properly
