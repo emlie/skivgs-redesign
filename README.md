@@ -1,6 +1,8 @@
 # Redesign of Ski Vgs Site
 A personal side project
 <br><br>
+**Status**: static, everything's hard coded
+<br><br>
 ## Resources
 Color information – dark blue – [link](https://www.colorhexa.com/053e68)
 <br>
