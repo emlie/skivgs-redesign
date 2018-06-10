@@ -36,6 +36,7 @@
   --p-beige: #EECA9E;
 
   --ski-blue-lighter: #64c3d8;
+  --ski-blue-darker: #053e68;
 
   --almost-white-lighter: #FCFCFC;
   --almost-white: #f7f7f7;
@@ -94,6 +95,7 @@ body {
 
 header {
   width: 100vw;
+  margin-top: calc(var(--space)*5);
   padding: 5rem 0 2.5rem 0;
   position: relative;
   top: 0;
@@ -107,6 +109,7 @@ header {
 
 nav {
   width: 100vw;
+  margin-top: calc(var(--space)*5);
   padding-bottom: calc(var(--space)*0.7);
   display: flex;
   flex-flow: column;
@@ -137,19 +140,19 @@ nav ul li a {
 
 main {
   width: 100vw;
+  margin-top: calc(var(--space)*5);
   padding: calc(var(--space)*4) 0 calc(var(--space)*4) 0;
   border-top: 0.2rem solid var(--ski-blue-lighter);
   background: transparent;
 }
 
-main div {
+main > div {
   border: 1px solid cyan;
 }
 
 footer {
   width: 100vw;
-  position: absolute;
-  bottom: 0;
+  margin-top: calc(var(--space)*20);
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -203,6 +206,16 @@ h2 {
   border: 1px solid transparent;
 }
 
+.wrapper-footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background: var(--gray-lighter);
+}
+
 
 
 
@@ -240,6 +253,7 @@ ul,
 .header-nav ul li {
   display: inline;
   margin: 0 4rem 0 0;
+  /* color: var(--ski-blue-darker); */
 }
 
 .header-nav ul li:last-child {
@@ -396,6 +410,68 @@ ul,
 
 .calendar {
   width: 20%;
+  font-family: var(--main-ff-ss-1);
+  font-weight: var(--regular);
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+}
+
+.calendar-content {
+  width: 100%;
+  margin-top: var(--space);
+  padding: calc(var(--space)*1.2);
+  display: grid;
+
+  /* rows | cols */
+  grid-template: repeat(7, 1fr) / 1fr 3fr;
+  background: var(--almost-white);
+  border: 1px solid transparent;
+  box-shadow: var(--smooth-light-shadow);
+}
+
+.calendar-date {
+  /* row-start | col-start | row-end | col-end */
+  grid-area: auto / auto / span 1 / span 1;
+  padding: calc(var(--space)*2) var(--space) var(--space) var(--space);
+  background: transparent;
+  border-bottom: 0.1rem solid var(--gray-lighter);
+  font-size: 2vw;
+  text-align: center;
+  line-height: calc(var(--space)*2.5);
+}
+
+.calendar-date span {
+  font-size: 0.7vw;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.calendar-event {
+  grid-area: auto / auto / span 1 / span 1;
+  padding: calc(var(--space)*2) var(--space) var(--space) var(--space);
+  background: transparent;
+  border-bottom: 0.1rem solid var(--gray-lighter);
+  font-size: 0.8vw;
+}
+
+.calendar-event::first-letter {
+  text-transform: uppercase;
+}
+
+.calendar-event a {
+  font-size: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+.first {
+  padding: var(--space);
+}
+
+.last {
+  border: none;
 }
 
 
