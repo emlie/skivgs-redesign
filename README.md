@@ -15,3 +15,4 @@ Unsplash photo – [link](https://unsplash.com/photos/pvHma684eEI)
 * footer afk-logo needs black text
 * footer nav heading => no underline + bold
 * issue with main nav
+* make each calendar row a link
