@@ -14,3 +14,4 @@ Unsplash photo – [link](https://unsplash.com/photos/pvHma684eEI)
 * main-nav-content for "for elever" and "om oss" does not display properly
 * footer afk-logo needs black text
 * footer nav heading => no underline + bold
+* issue with main nav
