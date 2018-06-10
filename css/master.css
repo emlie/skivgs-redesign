@@ -419,7 +419,7 @@ ul,
   font-weight: var(--regular);
   text-transform: none;
   text-decoration: none;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
   color: var(--almost-black);
 }
 
