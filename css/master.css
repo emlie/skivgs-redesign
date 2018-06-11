@@ -174,7 +174,7 @@ footer {
 
 h2 {
   padding-bottom: calc(var(--space)*0.5);
-  border-bottom: 0.1rem solid #ccc;
+  /* border-bottom: 0.1rem solid #ccc; */
   font-family: var(--main-ff-ss-1);
   font-size: 1.3vw;
   font-weight: var(--regular);
@@ -183,6 +183,27 @@ h2 {
   text-decoration: none;
   letter-spacing: 0.15rem;
   color: var(--almost-black);
+}
+
+h3 {
+  padding-bottom: calc(var(--space)*0.5);
+  font-family: var(--main-ff-ss-1);
+  font-size: 1.5vw;
+  font-weight: var(--bold);
+  text-align: left;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.15rem;
+  color: var(--almost-black);
+}
+
+h3::first-letter {
+  text-transform: uppercase;
+}
+
+h3 a {
+  font-size: inherit;
+  color: inherit;
 }
 
 
@@ -407,6 +428,109 @@ ul,
 .news {
   width: 60%;
   margin-right: calc(var(--space)*4);
+}
+
+.news-content {
+  width: 100%;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-gap: calc(var(--space)*2.5);
+}
+
+.news-content > div {
+  grid-area: auto / auto / span 1 / span 1;
+}
+
+.news-content-img {
+  width: 100%;
+  margin: var(--space) 0;
+  background: transparent;
+  /*
+  background: no-repeat center 70% url("../img/abigail-keenan-7852-unsplash.jpg");
+  */
+}
+
+.news-content-img img {
+  width: 100%;
+}
+
+.news-content-text,
+.news-content-text p {
+  width: 100%;
+  margin-top: var(--space);
+  font-family: var(--main-ff-ss-1);
+  font-size: 0.9vw;
+  font-weight: var(--regular);
+  text-align: justify;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  color: var(--almost-black);
+}
+
+.date {
+  font-size: inherit;
+  color: var(--gray-darker);
+}
+
+.readmore {
+  margin: var(--space) 0 calc(var(--space)*2) 0;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: inline-block;
+  border: 0.12rem solid var(--ski-blue-lighter);
+  border-radius: 0.2rem;
+  background: var(--ski-blue-lighter);
+  font-size: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: white;
+  transition: var(--smooth);
+}
+
+.readmore:hover,
+.news-archive-a:hover {
+  /*
+  background: var(--ski-blue-lighter);
+  color: white;
+  */
+  box-shadow: var(--smooth-light-shadow);
+}
+
+.readmore:active,
+.news-archive-a:active {
+  transform: translateY(0.25rem);
+}
+
+.news-archive {
+  width: 100%;
+  margin-top: calc(var(--space)*6);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: var(--main-ff-ss-1);
+  font-size: 0.9vw;
+  font-weight: var(--regular);
+  text-align: justify;
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+  color: var(--almost-black);
+}
+
+.news-archive-a {
+  display: inline-block;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: inline-block;
+  border: 0.1rem solid var(--ski-blue-lighter);
+  border-radius: 0.2rem;
+  background: transparent;
+  font-size: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  color: var(--ski-blue-lighter);
+  transition: var(--smooth);
 }
 
 
