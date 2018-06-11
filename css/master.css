@@ -277,6 +277,11 @@ ul,
   /* color: var(--ski-blue-darker); */
 }
 
+.header-nav ul li a {
+  font-size: inherit;
+  color: inherit;
+}
+
 .header-nav ul li:last-child {
   margin-right: calc(var(--space)*4)
 }
@@ -285,8 +290,14 @@ ul,
   text-transform: uppercase;
 }
 
+.header-nav button {
+  border: none;
+  background: transparent;
+}
+
 .header-nav img {
-  height: calc(var(--space)*1.5);
+  height: calc(var(--space)*1.2);
+  margin-bottom: -0.15rem;
 }
 
 
