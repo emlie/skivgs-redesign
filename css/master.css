@@ -109,8 +109,10 @@ header {
 
 nav {
   width: 100vw;
-  margin-top: calc(var(--space)*5);
+  height: auto;
+  margin-top: calc(var(--space)*8);
   padding-bottom: calc(var(--space)*0.7);
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -542,6 +544,10 @@ ul,
   letter-spacing: 0.15rem;
   color: var(--ski-blue-lighter);
   transition: var(--smooth);
+}
+
+.news-archive-a:first-child {
+  margin-bottom: var(--space);
 }
 
 
